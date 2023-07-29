@@ -42,12 +42,12 @@ const Home = () => {
             <div className="media-item" key={index}>
               {el.mediaType.endsWith('.mp4') || el.mediaType.endsWith('.avi') || el.mediaType.endsWith('.mov') ? (
                 <video controls>
-                  <source src={`http://localhost:8083/${el.mediaType}`} type="video/mp4" />
+                  <source src={`https://extinct-sweatpants-colt.cyclic.app/${el.mediaType}`} type="video/mp4" />
                   {/* Add more video source types if needed */}
                   Your browser does not support the video tag.
                 </video>
               ) : (
-                <img src={`http://localhost:8083/${el.mediaType}`} alt="imag" />
+                <img src={`https://extinct-sweatpants-colt.cyclic.app/${el.mediaType}`} alt="imag" />
               )}
               <h4>title: {el.title}</h4>
               <h4>Post Source: {el.mediaSource}</h4>

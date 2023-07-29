@@ -6,7 +6,7 @@ import axios from "axios";
 
 export const loginuser=(userData)=>(dispatch)=>{
     dispatch({type:LOGIN_REQUEST})
-   return axios.post("http://localhost:8083/admin/login",userData).then((res)=>{
+   return axios.post("https://extinct-sweatpants-colt.cyclic.app/admin/login",userData).then((res)=>{
     if(res.data.token!==undefined){
         localStorage.setItem("token",JSON.stringify(res.data.token))
         dispatch({
@@ -22,7 +22,7 @@ export const loginuser=(userData)=>(dispatch)=>{
 
 export const registeruser=(userData)=>(dispatch)=>{
     dispatch({type:LOGIN_REQUEST})
-   return axios.post("http://localhost:8083/admin/register",userData).then((res)=>dispatch({
+   return axios.post("https://extinct-sweatpants-colt.cyclic.app/admin/register",userData).then((res)=>dispatch({
         type:LOGIN_SUCCESS_POST
     })).catch((err)=>dispatch({type:LOGIN_FAILUER}))
 
